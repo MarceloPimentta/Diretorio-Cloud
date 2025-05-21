@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Repositório de Documentos Acadêmicos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Repositório de Documentos Acadêmicos</h1>
+    <nav id="navbar" style="display:none;">
+      <ul>
+        <li><a href="#" data-section="home">Início</a></li>
+        <li><a href="#" data-section="search">Pesquisar</a></li>
+        <li id="nav-add" style="display:none;"><a href="#" data-section="add">Adicionar Documento</a></li>
+        <li id="nav-edit" style="display:none;"><a href="#" data-section="edit">Editar Documento</a></li>
+        <li><a href="#" id="logout">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="login-section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Usuário:</label><br/>
+        <input type="text" id="username" name="username" required /><br/>
+        <label for="password">Senha:</label><br/>
+        <input type="password" id="password" name="password" required /><br/>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="home-section" style="display:none;">
+      <h2>Bem-vindo ao Repositório de Documentos Acadêmicos</h2>
+      <p>Use a navegação para acessar as funcionalidades disponíveis conforme seu perfil.</p>
+    </section>
+
+    <section id="search-section" style="display:none;">
+      <h2>Pesquisar Documentos</h2>
+      <form id="search-form">
+        <label for="search-keyword">Palavra-chave:</label><br/>
+        <input type="text" id="search-keyword" name="keyword" /><br/>
+        <label for="search-category">Categoria:</label><br/>
+        <input type="text" id="search-category" name="category" /><br/>
+        <label for="search-discipline">Disciplina:</label><br/>
+        <input type="text" id="search-discipline" name="discipline" /><br/>
+        <label for="search-year">Ano de Publicação:</label><br/>
+        <input type="number" id="search-year" name="year" /><br/>
+        <label for="search-author">Autor:</label><br/>
+        <input type="text" id="search-author" name="author" /><br/>
+        <label for="search-type">Tipo de Documento:</label><br/>
+        <select id="search-type" name="type">
+          <option value="">Todos</option>
+          <option value="artigo">Artigo</option>
+          <option value="tese">Tese</option>
+          <option value="apostila">Apostila</option>
+        </select><br/><br/>
+        <button type="submit">Pesquisar</button>
+      </form>
+      <div id="documents-list"></div>
+    </section>
+
+    <section id="add-section" style="display:none;">
+      <h3>Adicionar Documento</h3>
+      <form id="upload-form" enctype="multipart/form-data">
+        <label for="title">Título:</label><br/>
+        <input type="text" id="title" name="title" required /><br/>
+        <label for="category">Categoria:</label><br/>
+        <input type="text" id="category" name="category" required /><br/>
+        <label for="discipline">Disciplina:</label><br/>
+        <input type="text" id="discipline" name="discipline" required /><br/>
+        <label for="year">Ano de Publicação:</label><br/>
+        <input type="number" id="year" name="year" required /><br/>
+        <label for="author">Autor:</label><br/>
+        <input type="text" id="author" name="author" required /><br/>
+        <label for="type">Tipo de Documento:</label><br/>
+        <select id="type" name="type" required>
+          <option value="artigo">Artigo</option>
+          <option value="tese">Tese</option>
+          <option value="apostila">Apostila</option>
+        </select><br/><br/>
+        <label for="document">Arquivo PDF:</label><br/>
+        <input type="file" id="document" name="document" accept="application/pdf" required /><br/><br/>
+        <button type="submit">Enviar Documento</button>
+      </form>
+    </section>
+
+    <section id="edit-section" style="display:none;">
+      <h3>Editar Documento</h3>
+      <form id="edit-form">
+        <label for="edit-id">ID do Documento:</label><br/>
+        <input type="number" id="edit-id" name="id" readonly /><br/>
+        <label for="edit-title">Título:</label><br/>
+        <input type="text" id="edit-title" name="title" required /><br/>
+        <label for="edit-category">Categoria:</label><br/>
+        <input type="text" id="edit-category" name="category" required /><br/>
+        <label for="edit-discipline">Disciplina:</label><br/>
+        <input type="text" id="edit-discipline" name="discipline" required /><br/>
+        <label for="edit-year">Ano de Publicação:</label><br/>
+        <input type="number" id="edit-year" name="year" required /><br/>
+        <label for="edit-author">Autor:</label><br/>
+        <input type="text" id="edit-author" name="author" required /><br/>
+        <label for="edit-type">Tipo de Documento:</label><br/>
+        <select id="edit-type" name="type" required>
+          <option value="artigo">Artigo</option>
+          <option value="tese">Tese</option>
+          <option value="apostila">Apostila</option>
+        </select><br/><br/>
+        <button type="submit">Salvar Alterações</button>
+      </form>
+      <button id="back-to-search">Voltar para Pesquisa</button>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

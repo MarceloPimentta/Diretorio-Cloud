@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav#navbar {
+  background-color: #0066cc;
+  padding: 0.5rem 1rem;
+}
+
+nav#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav#navbar ul li {
+  display: inline;
+}
+
+nav#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav#navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+#documents-list div {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
